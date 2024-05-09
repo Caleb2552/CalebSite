@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fran's Kitchen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        .image-cooking-chef {
+            width: 700px;
+            display: block;
+        }
+
+        .middle-section {
+            flex: 1;
+            margin-left: 450px;
+            margin-right: 50px;
+            max-width: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar {
+            display: block;
+            flex: 1;
+            height: 26px;
+            border: 1px solid rgb(192, 192, 192);
+            border-radius: 10px;
+            box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .search-button {
+            height: 30px;
+            width: 66px;
+            font-size: 15px;
+            background-color: cornsilk;
+            border-radius: 10px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(192, 192, 192);
+            margin-left: -14px;
+            margin-right: 10px;
+        }
+
+        .kitchen-motto {
+            width: 500px;
+            color: green;
+        }
+
+        .kitchen-preview {
+            display: flex;
+            align-items: center;
+        }
+
+        .food-menu {
+            /* width: 5; */
+            color: green;
+        }
+
+        .food-pics {
+            width: 210px;
+            border-radius: 75px;
+            display: grid;
+            row-gap: 40px;
+            column-gap: 12px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .food-amount {
+            margin-top: 0;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .food-name {
+            color: green;
+            font-size: bold;
+            font-style: italic;
+        }
+
+        .food-content {
+            display: flex;
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .order-now {
+            background-color: black;
+            color: aqua;
+            border-radius: 10px;
+            height: 30px;
+            width: 200px;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 0.5s;
+            cursor: pointer;
+        }
+
+        .body {
+            background-color: cornsilk;
+        }
+
+        .header {
+            height: 55px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 200;
+            padding-top: 5px;
+
+            background-color: cornsilk;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: rgb(228, 228, 228);
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger-menu {
+            display: flex;
+            align-items: center;
+            height: 24px;
+            margin-left: 24px;
+            margin-right: 24px;
+            margin-top: 12px;
+        }
+
+        .kitchen-logo {
+            height: 60px;
+            width: 220px;
+            color: cornsilk;
+        }
+
+        .right-section {
+            width: 180px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        .notifications-icon {
+            height: 24px;
+        }
+
+        .home-icon {
+            height: 24px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-top: 200px;
+            padding: 100px;
+            gap: 50px;
+            /* width: 100%; */
+        }
+        .pay{
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
+        }
+    </style>
+</head>
+
+<body class="body">
+
+    <div class="header">
+        <div class="left-section">
+            <img class="hamburger-menu" src="image/icons/hamburger-menu.svg">
+            <div>
+                <img class="kitchen-logo" src="image/logos/download (1).jpg">
+            </div>
+        </div>
+        <div class="middle-section">
+            <input class="search-bar" type="text">
+            <button class="search-button">
+                <div class="tooltip">Search</div>
+            </button>
+        </div>
+        <div class="right-section">
+            <div class="notifications-icon-container">
+                <img class="notifications-icon" src="image/icons/notifications.svg">
+            </div>
+            <div>
+                <img class="home-icon" src="image/icons/home.svg">
+            </div>
+        </div>
+    </div>
+
+    <!-- <br> -->
+
+    <div>
+        <div class="kitchen-preview">
+            <div>
+                <img class="image-cooking-chef"
+                    src="cooking-chef-hand-stock-photography-png-favpng-yGNeVE5PUDMSwUaWZUHnBCYRb.jpg">
+                <p class="kitchen-motto">
+                    Welcome to Fran's kitchen,where delicacy meets your taste!!!
+                </p>
+            </div>
+
+            <div>
+                <div class="grid">
+                    <div>
+                        <div class="food-menu">
+                            <img class="food-pics" src="istockphoto-1256476993-612x612.jpg">
+                        </div>
+                        <div class="food-info">
+                            <p class="food-name">
+                                Ghana jollof
+                            </p>
+
+                            <p class="food-amount">
+                                $20
+                            </p>
+
+                            <p class="food-content">
+                                1 portion of Ghana jollof rice and 1pcs of large fried chicken thigh
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="food-menu">
+                            <img class="food-pics" src="istockphoto-1398349488-612x612.jpg">
+                        </div>
+                        <div class="food-info">
+                            <p class="food-name">
+                                Amala & Ewedu
+                            </p>
+
+                            <p class="food-amount">
+                                $23
+                            </p>
+
+                            <p class="food-content">
+                                1 portion of Amala and Ewedu soup and a bowl of shaki
+                            </p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="food-menu">
+                            <img class="food-pics" src="istockphoto-498310978-612x612.jpg">
+                        </div>
+                        <div class="food-info">
+                            <p class="food-name">
+                                Fufu & Egusi soup
+                            </p>
+
+                            <p class="food-amount">
+                                $15
+                            </p>
+
+                            <p class="food-content">
+                                1 portion of fufu & egusi soup and beef
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="food-menu">
+                            <img class="food-pics" src="istockphoto-688602226-612x612.jpg">
+                        </div>
+                        <div class="food-info">
+                            <p class="food-name">
+                                Nigerian jollof,plantain & crispy chicken thighs
+                            </p>
+
+                            <p class="food-amount">
+                                $35
+                            </p>
+
+                            <p class="food-content">
+                                1 portion of Nigerian jollof rice,fried plantain & a bowl of crispy chicken thigh
+                            </p>
+                        </div>
+                        <div class="pay">
+                            <button class="order-now">
+                                ORDER NOW!
+                            </button>
+                            <div>
+                                <label for="payment">Payment:</label>
+                                <select id="payment" name="payment">
+                                    <option>Visa</option>
+                                    <option>Mastercard</option>
+                                    <option>Giftcard</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <!-- <br> -->
+
+
+</body>
+
+</html>
